@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NoSQLBrasil: Trends</title>
+	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+	
+</head> 
+<body>
+
+ 
+<div data-role="page" id="jqm-home" class="type-home">
+
+
+	<div data-role="content">
+
+
+	<div class="content-secondary">
+	
+			<div id="jqm-homeheader">
+				<h1>Infinispan Demo App</h1>
+				<p id="jqm-version">nosql:brasil 2011 : http://nosqlbr.com/</p>
+			</div>
+	
+	
+
+		</div><!--/content-primary-->	
+		
+		<div class="content-primary">
+		
+		<div data-role="collapsible" data-collapsed="true" data-theme="a">
+        <h3>Comment a Session</h3>
+ <form name="commentform" id="commentform" data-ajax="false" action="add" method="POST">
+	    <div data-role="fieldcontain">
+	    
+
+	    <label for="sessionName" class="select">Select Session:</label>
+	    
+     	<select name="sessionName" id="sessionName">
+        #foreach( $session in $sessions )
+             <option value="$session.name">$session.name by: $session.speaker</option>
+        #end
+	    </select>
+
+	<label for="comment">Your Comment:</label>
+	<textarea cols="40" rows="8" name="comment" id="comment" maxlength="170"></textarea>
+
+	
+
+	
+    <label for="twitter">Twitter Account:</label>
+    <input type="text" name="twitter" id="twitter" value=""  />
+    
+     <input type="submit" value="Add Comment" name="save" id="save"/>
+    </form>
+
+
+         </div>	
+
+		</div>
+		
+			<nav>
+				
+		
+				<ul data-role="listview" data-inset="true" data-theme="a" data-dividertheme="b">
+					<li data-role="list-divider">Last Comments</li>
+					 #foreach( $comment in $comments )
+					<li>$comment</li>
+					#end
+
+				</ul>
+			</nav>
+		</div>
+
+		
+
+	</div>
+	
+	<div data-role="footer" class="footer-docs" data-theme="c">
+			<p>&copy; Edgar Silva - Red Hat do Brasil</p>
+	</div>	
+	
+</div>
+</body>
+</html>
+

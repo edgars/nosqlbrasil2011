@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Red Hat LATAM</title>
+<link rel="stylesheet" href="http://$app/styles.css" type="text/css" />
+</head>
+<body>
+<div class="wrapper">
+	<div class="top">
+		<div class="header">
+			<!-- TITLE -->
+			<h1><img src="http://$app/rh.png" border="0"></img></h1>
+			<h2>Red Hat LATAM</h2>
+			<div class="clear"></div>
+			<!-- END TITLE -->
+		</div>
+		<!-- MENU -->
+		<div class="menu">
+
+		</div>
+	</div>		
+	<div class="content">	
+		<div class="page-content">	
+			<!-- CONTENT -->
+			<h3>Viagem para : $trip.employee.name </h3>
+			<p>Veja os Detalhes desta viagem: </p>
+			<ul>
+				<li>Partindo de : $trip.from </li>
+				<li>Para : $trip.to</li>
+				<li>Gerente: $trip.employee.manager.name</li>
+				<li>Departamento: $trip.employee.depto</li>
+				<li>Data da Ida: $trip.departure</li>
+				<li>Preferência da Ida: $trip.prefsDept</li>
+				<li>Se você quiser enviar um email para este funcionário, <a href="mailto:$trip.employee.email">clique aqui</a></li>
+			</ul>
+	
+			<p>
+			 <a href="http://$app/rest/viagem/$trip.id/pdf"> <img src="http://$app/pdficon.png" border="0" alt="Clique para ver a Reserva - [NECESSITA ATIVAR O APACHE]"></a>
+			 <a href="mailto:$trip.employee.email"> <img src="http://$app/email.png" border="0" alt="Clique para Enviar um E-Mail para Este Funcionário"></a>
+			 
+			</p>
+			
+			<!-- END CONTENT -->
+		</div>
+	</div>
+	<div class="sidebar">	
+		
+		<!-- SIDEBAR -->
+		<ul>	
+			<li>
+				
+				<ul>
+					<li><a href="http://intranet.corp.redhat.com" title="Intranet">Intranet</a></li>
+					<li><a href="https://docspace.corp.redhat.com/" title="DocSpace">DocSpace</a></li>
+				</ul>
+			</li>
+			
+
+		</ul>
+		<!-- SIDEBAR -->
+
+	</div>
+
+	<div class="clear"></div>			
+
+	
+</div>
+
+			
+
+</body>
+</html>
+
